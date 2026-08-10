@@ -71,6 +71,21 @@
                 applicationServerKey: urlBase64ToUint8Array("BCuKYcI3oXaw4ISfEq0sb1objS_lpN3p7cKBjGUrc27_5vI8JhJGIugH21NHTerbRrmNr3T5gVA4S9ePf-uba2E")
             });
 
+            const response = await fetch("/api/sub", {
+
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json"
+                },
+
+                body: JSON.stringify(subscription)
+            });
+
+            const data = await response.json();
+
+            console.log(data);
+
             console.log("Push Subscription :", subscription);
 
         });
