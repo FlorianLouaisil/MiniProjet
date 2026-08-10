@@ -18,6 +18,11 @@
         Tester
     </button>
 
+
+    <button id="notificationButton">
+        🔔 Activer les notifications
+    </button>
+
     <p id="result"></p>
 
     <script>
@@ -29,6 +34,15 @@
             const data = await response.json();
 
             document.getElementById("result").textContent = data.message;
+
+        });
+
+
+        document.getElementById("notificationButton").addEventListener("click", async () => {
+
+            const permission = await Notification.requestPermission();
+
+            console.log("Permission :", permission);
 
         });
 
