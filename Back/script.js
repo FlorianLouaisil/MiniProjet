@@ -1,5 +1,9 @@
-export default function handler(req, res) {
-    res.status(200).json({
-        message: "Hello depuis l'API Vercel !"
+export function GET() {
+    return Response.json({
+        message: "Hello depuis Vercel !"
     });
 }
+
+
+
+
