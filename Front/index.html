@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Vercel</title>
+</head>
+
+<body>
+
+    <h1>🚀 Test Vercel</h1>
+
+    <p>Mon premier mini-projet.</p>
+
+    <button id="testButton">
+        Tester
+    </button>
+
+    <p id="result"></p>
+
+    <script>
+        document.getElementById("testButton").addEventListener("click", async () => {
+
+            const response = await fetch("/back/script");
+
+            const data = await response.json();
+
+            document.getElementById("result").textContent = data.message;
+        });
+    </script>
+
+</body>
+
+</html>
