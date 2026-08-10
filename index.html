@@ -22,7 +22,7 @@
     <script>
         document.getElementById("testButton").addEventListener("click", async () => {
 
-            const response = await fetch("/Back/script");
+            const response = await fetch("/api/hello");
 
             const data = await response.json();
 
