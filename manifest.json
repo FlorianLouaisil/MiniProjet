@@ -1,8 +1,21 @@
 {
-    "name": "Test Push Vercel",
-    "short_name": "Push Test",
+    "name": "Test Vercel",
+    "short_name": "Test Vercel",
     "start_url": "/",
+    "scope": "/",
     "display": "standalone",
     "background_color": "#ffffff",
-    "theme_color": "#ffffff"
+    "theme_color": "#ffffff",
+    "icons": [
+        {
+            "src": "/StarEmpty.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/StarEmpty.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
 }
