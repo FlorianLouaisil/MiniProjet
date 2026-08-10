@@ -70,23 +70,29 @@
                 userVisibleOnly: true,
                 applicationServerKey: urlBase64ToUint8Array("BCuKYcI3oXaw4ISfEq0sb1objS_lpN3p7cKBjGUrc27_5vI8JhJGIugH21NHTerbRrmNr3T5gVA4S9ePf-uba2E")
             });
+            try {
 
-            const response = await fetch("/api/sub", {
+                const response = await fetch("/api/sub", {
 
-                method: "POST",
+                    method: "POST",
 
-                headers: {
-                    "Content-Type": "application/json"
-                },
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
 
-                body: JSON.stringify(subscription)
-            });
+                    body: JSON.stringify(subscription)
+                });
 
-            const data = await response.json();
+                const data = await response.json();
 
-            console.log(data);
+                console.log("Réponse API :", data);
+                console.log("Push Subscription :", subscription);
 
-            console.log("Push Subscription :", subscription);
+            } catch (error) {
+
+                console.error("Erreur :", error);
+
+            }
 
         });
 
